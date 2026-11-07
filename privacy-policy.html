@@ -170,10 +170,10 @@
 
         <article class="policy-card">
             <h1>Privacy Policy</h1>
-            <div class="effective-date">Last Updated: October 2026</div>
+            <div class="effective-date">Last Updated: November 2026</div>
 
             <p>
-                At <strong>Daisy Game Studio</strong> ("we", "us", or "our"), your privacy is of paramount importance. This Privacy Policy universally applies to all mobile games, puzzle titles, and interactive applications published by <strong>Daisy Game Studio</strong> on the Google Play Store and other mobile distribution platforms.
+                At <strong>Daisy Game Studio</strong> ("we", "us", or "our"), your privacy is of paramount importance. This Privacy Policy universally applies to all mobile games, puzzle titles, and interactive applications published by <strong>Daisy Game Studio</strong> on the Google Play Store and other mobile distribution platforms (including <em>Catdoku: Find The Cat Puzzle</em>).
             </p>
 
             <div class="highlight-box">
@@ -187,48 +187,46 @@
 
             <h2>2. Information Collection and Storage</h2>
             <p>
-                We design our games with a privacy-first architecture, collecting only what is strictly necessary to deliver smooth, crash-free, and engaging entertainment:
+                We design our games with a privacy-first, offline-friendly architecture, collecting only what is strictly necessary to deliver smooth, crash-free, and engaging entertainment:
             </p>
             <ul>
-                <li><strong>Local Gameplay Data:</strong> High scores, completed levels, achievements, virtual currency, and game settings (audio, theme, haptic feedback) are stored strictly locally on your own device's internal storage.</li>
-                <li><strong>Anonymous Hardware & System Specs:</strong> General technical information (device model, operating system version, screen resolution, and language preference) may be processed locally by the game engine to optimize rendering and frame rates.</li>
+                <li><strong>Local Gameplay Data:</strong> High scores, completed levels, achievements, virtual coins, and game settings (audio, theme, haptic feedback) are stored strictly locally on your own device's internal storage via standard Android SharedPreferences. This data never leaves your device and is erased only if you uninstall the game or clear app storage.</li>
+                <li><strong>Anonymous Hardware & System Specs:</strong> General technical parameters (device model, operating system version, screen resolution, and language preference) may be processed locally by the game engine to optimize rendering and frame rates.</li>
             </ul>
 
-            <h2>3. Third-Party Services: Firebase & AdMob</h2>
+            <h2>3. Third-Party Services & Advertising Networks</h2>
             <p>
-                To provide high-quality free-to-play games, deliver in-game rewards, and ensure continuous technical stability, our games integrate trusted third-party SDKs provided by <strong>Google LLC</strong>:
+                To provide free-to-play access, deliver in-game rewards (such as hints and undo moves), and ensure technical stability, our games integrate trusted third-party SDKs that comply with Google Play Developer policies:
+            </p>
+
+            <p>
+                <span class="service-badge">Advertising</span><strong>Unity LevelPlay (ironSource Mediation):</strong><br>
+                Used to mediate and manage family-safe interstitial and rewarded video advertisements. In compliance with Google Play Families Self-Certified Ads SDK requirements, all ad requests for children and family titles are flagged with strict COPPA parameters (<code>is_child_directed = true</code> and <code>is_deviceid_optout = true</code>), completely suppressing behavioral tracking and personal data collection. For further information, visit the <a href="https://www.is.com/privacy-policy/" target="_blank" rel="noopener">ironSource Privacy Policy</a>.
+            </p>
+
+            <p>
+                <span class="service-badge">Advertising</span><strong>Unity Ads (Unity Technologies):</strong><br>
+                Used as a real-time in-app bidding partner to display rewarded and interstitial advertisements. Unity Ads processes anonymous, non-personal diagnostic and performance telemetry to render video ads smoothly without tracking children. For details, review the <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">Unity Game Player and App User Privacy Policy</a>.
             </p>
 
             <p>
                 <span class="service-badge">Advertising</span><strong>Google AdMob:</strong><br>
-                Used to deliver banner, interstitial, and rewarded video advertisements. AdMob may process pseudonymous device identifiers (such as the Google Advertising ID / GAID) and device information to display relevant or contextual ads, track ad performance, and combat ad fraud. Our official authorized publisher verification is hosted at <a href="/app-ads.txt">daisygame.github.io/app-ads.txt</a>.
+                Used to deliver banner, interstitial, and rewarded advertisements. AdMob requests in our family-designated games are configured with maximum content rating restrictions (G rating) and child-directed treatment flags (TAG_FOR_CHILD_DIRECTED_TREATMENT_TRUE). Our authorized seller declaration is published at <a href="/app-ads.txt">daisygame.github.io/app-ads.txt</a>. For details, review the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.
             </p>
 
             <p>
-                <span class="service-badge">Analytics</span><strong>Google Firebase Analytics:</strong><br>
-                Used to collect aggregated, non-personally identifiable telemetry data (e.g., game launch counts, level completion rates, session duration) to help us balance puzzle difficulty and understand player retention without identifying individual players.
+                <span class="service-badge">Diagnostics</span><strong>Google Firebase (Remote Config, Analytics & Crashlytics):</strong><br>
+                Used for remote feature configuration, anonymous stability metrics, and automated crash diagnostic logs so our team can swiftly deploy performance updates without gathering personally identifiable information. For details, consult <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Firebase Privacy and Security</a>.
             </p>
 
-            <p>
-                <span class="service-badge">Crash Reporting</span><strong>Google Firebase Crashlytics:</strong><br>
-                Used to automatically detect, diagnose, and fix game crashes and technical bugs. When a crash occurs, Crashlytics records stack traces and hardware state at the moment of the crash so our engineering team can swiftly deploy stability patches.
-            </p>
-
-            <p>For more details on how Google processes and secures data across these services, please consult:</p>
-            <ul>
-                <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy & Terms</a></li>
-                <li><a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">Google AdMob Privacy Disclosures</a></li>
-                <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Google Firebase Privacy and Security</a></li>
-            </ul>
-
-            <h2>4. Children's Privacy (COPPA & Google Play Families Policy)</h2>
+            <h2>4. Children's Privacy (COPPA, GDPR-K & Google Play Families Policy)</h2>
             <p>
                 Daisy Game Studio is deeply committed to protecting the privacy of children:
             </p>
             <ul>
-                <li>We adhere strictly to the <strong>Children's Online Privacy Protection Act (COPPA)</strong> and the <strong>Google Play Families Policy</strong>.</li>
-                <li>We do not knowingly collect, store, or solicit personally identifiable information from children under the age of 13 (or under 16 in the European Economic Area).</li>
-                <li>In games designated for families or children, advertising requests are flagged for child-directed treatment (COPPA / TFCD / TFUA compliance) and restricted to family-safe ad categories.</li>
+                <li>We adhere strictly to the <strong>Children's Online Privacy Protection Act (COPPA)</strong>, <strong>GDPR-K</strong>, and the <strong>Google Play Families Policy</strong>.</li>
+                <li>We do not knowingly collect, store, share, or solicit personally identifiable information from children under the age of 13 (or under 16 in the European Economic Area).</li>
+                <li>In all games designated for families, advertising requests are restricted exclusively to <strong>Google Play Self-Certified Ads SDKs</strong> (including Unity LevelPlay and Unity Ads) with non-personalized, child-directed treatment enforced.</li>
             </ul>
 
             <h2>5. Your Privacy Rights & Ad Controls (GDPR & CCPA)</h2>
@@ -237,7 +235,7 @@
             </p>
             <ul>
                 <li><strong>Resetting Advertising ID:</strong> You can reset or delete your Google Advertising ID anytime in your Android settings: <em>Settings &rarr; Google &rarr; Ads &rarr; Reset/Delete Advertising ID</em>.</li>
-                <li><strong>Opting Out of Personalized Ads:</strong> You can turn off personalized ad recommendations through your device settings or through any in-game consent management dialogs (UMP / GDPR consent forms).</li>
+                <li><strong>Opting Out of Personalized Ads:</strong> You can turn off personalized ad recommendations through your device settings. In our child-directed games, personalized tracking is disabled by default for all players.</li>
             </ul>
 
             <h2>6. Policy Updates</h2>
